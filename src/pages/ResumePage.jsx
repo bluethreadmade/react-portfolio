@@ -1,10 +1,10 @@
-// This is a static page with a contact form
-export default function ContactPage() {
+// This is a static page that displays and links to download my resume
+export default function ResumePage() {
     return (
       <div>
         <img></img>
         <p>
-          CONTACT CONTACT CONTACT Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          RESUME RESUME RESUME Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
           tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
           impedit suscipit sed magnam alias in, repellat expedita hic explicabo
           architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
