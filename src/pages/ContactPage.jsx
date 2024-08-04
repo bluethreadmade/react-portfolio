@@ -1,12 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Field, Label, Switch } from '@headlessui/react'
 
 // This is a static page with a contact form
 export default function ContactPage() {
-  const [agreed, setAgreed] = useState(false)
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
