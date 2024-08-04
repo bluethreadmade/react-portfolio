@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // Bringing in the pages the router will use to conditionally show the appropriate views
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import ResumePage from './pages/ResumePage';
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       children: [
         {
           index: true,
-          element: <AboutPage />,
+          element: <HomePage />,
         },
         {
           path: 'portfolio',

@@ -1,5 +1,5 @@
 // This is a static page - an "About Me" section
-export default function AboutPage() {
+export default function HomePage() {
   return (
     <div>
       <img></img>
