@@ -13,7 +13,7 @@ export default function FooterLinks() {
         <Link key={2} className="nav-link text-light" to="#">
           LinkedIn
         </Link>,
-        <Link key={2} className="nav-link text-light" to="#">
+        <Link key={3} className="nav-link text-light" to="#">
           Artisans
         </Link>,
       ]}
