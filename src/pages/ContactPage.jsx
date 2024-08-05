@@ -1,10 +1,7 @@
-'use client'
-
-//import { useState } from 'react'
-
 // This is a static page with a contact form
 export default function ContactPage() {
     return (
+        <div>
         <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div
                 aria-hidden="true"
@@ -111,6 +108,7 @@ export default function ContactPage() {
                     </button>
                 </div>
             </form>
+        </div>
         </div>
     )
 }
