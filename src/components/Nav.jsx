@@ -2,14 +2,21 @@
 import { NavLink } from 'react-router-dom'
 import Navbar from './UI/Navbar'
 
+const navigation = [
+    { name: 'About', href: '/' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Resume', href: '/resume' },
+];
+
 export default function Nav() {
     // The Navbar UI component will render each of the Link elements in the links prop
     return (
         <Navbar
-            links={[
+            links={navigation.map((item) => ( 
                 <NavLink
-                    to="/"
-                    key={1}
+                    to={item.href}
+                    key={item.name}
                     className={({ isActive }) =>
                         [
                             'px-2 py-2.5',
@@ -19,51 +26,10 @@ export default function Nav() {
                         ].join(' ')
                     }
                 >
-                    About Me
-                </NavLink>,
-                <NavLink
-                    to="/portfolio"
-                    key={2}
-                    className={({ isActive }) =>
-                        [
-                            'px-2 py-2.5',
-                            'hover:bg-cprimary-300 hover:text-csecond-100',
-                            'rounded-md transition',
-                            isActive ? 'bg-red-500' : 'bg-black-500',
-                        ].join(' ')
-                    }
-                >
-                    Portfolio
-                </NavLink>,
-                <NavLink
-                    to="/resume"
-                    key={2}
-                    className={({ isActive }) =>
-                        [
-                            'px-2 py-2.5',
-                            'hover:bg-cprimary-300 hover:text-csecond-100',
-                            'rounded-md transition',
-                            isActive ? 'bg-red-500' : 'bg-black-500',
-                        ].join(' ')
-                    }
-                >
-                    Resume
-                </NavLink>,
-                <NavLink
-                    to="/contact"
-                    key={2}
-                    className={({ isActive }) =>
-                        [
-                            'px-2 py-2.5',
-                            'hover:bg-cprimary-300 hover:text-csecond-100',
-                            'rounded-md transition',
-                            isActive ? 'bg-red-500' : 'bg-black-500',
-                        ].join(' ')
-                    }
-                >
-                    Contact
-                </NavLink>,
-            ]}
+                    {item.name}
+                </NavLink>
+                ))}
+                
         />
     )
 }
