@@ -16,10 +16,7 @@ export default function Nagivation() {
                 <NavLink
                     to={item.href}
                     className={({ isActive }) =>{
-                        return (
-                            'px-2 py-2.5 hover:bg-cprimary-300 hover:text-csecond-100 rounded-md '+
-                            (isActive? 'text-green-400': 'text-red-600')
-                            );
+                        return 'px-2 py-2.5 hover:bg-cprimary-300 hover:text-csecond-100 rounded-md '+ (isActive? 'text-green-400': 'text-red-600')
                         }}
                 >
                     {item.name}
