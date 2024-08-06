@@ -1,4 +1,6 @@
-export default function Nav({ links }) {
+import Navigation from './UI/Navigation'
+
+export default function Header() {
     return (
         <header className="bg-white">
             <nav
@@ -10,7 +12,7 @@ export default function Nav({ links }) {
                 </div>
 
                 <div className="hidden lg:flex lg:gap-x-12">
-                    <ul className="nav">{links.map((link) => link)}</ul>
+                        <Navigation />
                 </div>
             </nav>
         </header>
