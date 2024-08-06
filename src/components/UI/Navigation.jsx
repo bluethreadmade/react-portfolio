@@ -18,7 +18,7 @@ export default function Nagivation() {
                     className={({ isActive }) =>{
                         return (
                             'px-2 py-2.5 hover:bg-cprimary-300 hover:text-csecond-100 rounded-md '+
-                            (isActive? 'text-grey-300': 'text-red-600')
+                            (isActive? 'text-green-400': 'text-red-600')
                             );
                         }}
                 >
