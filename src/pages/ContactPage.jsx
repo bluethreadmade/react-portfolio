@@ -6,7 +6,7 @@ export default function ContactPage() {
     const [ email, setEmail ] = useState('');
     const [ message, setMessage ] = useState('');
     const [ messageActive, setMessageActive ] = useState(true);
-    const [ isEmailValid, setIsEmailValid ] = useState();
+    const [ isEmailValid, setIsEmailValid ] = useState(true);
 
     return (
         <div>
