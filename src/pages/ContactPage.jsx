@@ -51,7 +51,6 @@ export default function ContactPage() {
                             <input
                                 value={email}
                                 onChange={e => {setEmail(e.target.value); setIsEmailValid(e.target.validity.valid)}}
-                                //onMouseLeave={ () => setIsEmailValid(e.target.validity.valid)}
                                 id="email"
                                 name="email"
                                 type="email"
