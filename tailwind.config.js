@@ -10,6 +10,7 @@ module.exports = {
                 textLight: '#EEF5DB',
                 accent: '#49306B',
                 background: '#b8d8d8',
+                headerBackground: '#92c3c3'
             },
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
