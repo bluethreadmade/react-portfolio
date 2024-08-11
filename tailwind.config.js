@@ -6,7 +6,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                ...colors,
+                primary: '#7A9E9F',
+                textLight: '#EEF5DB',
+                accent: '#49306B',
+                background: '#b8d8d8',
             },
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],

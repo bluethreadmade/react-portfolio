@@ -10,13 +10,13 @@ const navigation = [
 
 export default function Nagivation() {
     return (
-        <ul>
+        <ul className="flex space-x-6">
             {navigation.map((item) => (
                 <li key={item.name}>
                 <NavLink
                     to={item.href}
                     className={({ isActive }) =>{
-                        return 'px-2 py-2.5 hover:bg-cprimary-300 hover:text-csecond-100 rounded-md '+ (isActive? 'text-green-400': 'text-red-600')
+                        return 'px-2 py-2.5 hover:bg-cprimary-300 hover:text-csecond-100 rounded-md text-2xl font-bold '+ (isActive? 'text-textLight': 'text-accent')
                         }}
                 >
                     {item.name}
