@@ -1,5 +1,11 @@
 export default function ResumeButton() {
     return (
-        <a href="./Megan McNeill Resume.pdf" class="px-4 py-1 text-sm bg-accent text-textLight font-semibold rounded-full border border-accent hover:text-white hover:bg-purple-600 hover:border-transparent" download>Download Resume</a>
+        <a
+            href="./Megan McNeill Resume.pdf"
+            class="bg-accent text-textLight border-accent rounded-full border px-4 py-1 text-lg font-semibold hover:border-transparent hover:bg-purple-600 hover:text-white"
+            download
+        >
+            Download Resume
+        </a>
     )
 }

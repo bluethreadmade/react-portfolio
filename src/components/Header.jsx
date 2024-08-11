@@ -2,7 +2,7 @@ import Navigation from './UI/Navigation'
 
 export default function Header() {
     return (
-        <header className="bg-background py-4">
+        <header className="bg-primary py-4">
             <nav
                 aria-label="Global"
                 className="mx-auto flex flex-col max-w-7xl items-center justify-between p-6 lg:px-8 lg:flex-row"
