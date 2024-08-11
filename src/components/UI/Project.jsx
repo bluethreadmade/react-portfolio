@@ -49,19 +49,19 @@ const project = [
 
 export default function Project() {
     return (
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
             {project.map((item) => (
-                <div class="max-w-sm overflow-hidden rounded shadow-lg">
-                    <div class="relative">
+                <div className="max-w-sm overflow-hidden rounded shadow-lg">
+                    <div className="relative">
                         <img
-                            class="w-full"
+                            className="w-full"
                             src={item.image}
                             alt="Sunset in the mountains"
                         />
-                        <div class="absolute inset-y-0 right-0 flex flex-col justify-center space-y-2 bg-white bg-opacity-50 p-2 hover:bg-opacity-100">
+                        <div className="absolute inset-y-0 right-0 flex flex-col justify-center space-y-2 bg-white bg-opacity-50 p-2 hover:bg-opacity-100">
                             <a href={item.deployedLink}>
                                 <svg
-                                    class="h-6 w-12 text-indigo-500"
+                                    className="h-6 w-12 text-indigo-500"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ export default function Project() {
                             </a>
                             <a href={item.githubLink}>
                                 <svg
-                                    class="h-6 w-12 text-indigo-500"
+                                    className="h-6 w-12 text-indigo-500"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -93,9 +93,11 @@ export default function Project() {
                             </a>
                         </div>
                     </div>
-                    <div class="px-6 py-4">
-                        <div class="mb-2 text-xl font-bold">{item.title}</div>
-                        <p class="text-base text-gray-700">
+                    <div className="px-6 py-4">
+                        <div className="mb-2 text-xl font-bold">
+                            {item.title}
+                        </div>
+                        <p className="text-base text-gray-700">
                             {item.description}
                         </p>
                     </div>
