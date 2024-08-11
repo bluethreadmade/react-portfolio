@@ -2,8 +2,8 @@
 export default function HomePage() {
     return (
         <div className="bg-background">
-        <div className="mx-auto max-w-7xl flex items-center space-x-4 bg-background">
-            <img src="/assets/headshot.jpg" className="my-36 mx-32 w-[12rem] h-[9rem]4 rounded-full object-cover"></img>
+        <div className="mx-auto max-w-7xl flex items-center space-x-4 lg:flex-row flex-col bg-background">
+            <img src="/assets/headshot.jpg" className="mb-12 w-32 lg:w-64 rounded-full object-cover"></img>
             <p className="text-lg font-medium text-gray-800">
                 ABOUT ABOUT ABOUT Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Repellendus tenetur maiores, dolor iusto
