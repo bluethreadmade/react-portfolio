@@ -1,17 +1,19 @@
 // Bringing in the required import from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
-import FooterLinks from './components/FooterLinks'
+import Footer from './components/Footer'
 import Header from './components/Header'
 
 function App() {
     // The Outlet component will conditionally swap between the different pages according to the URL
     return (
-        <>
+        <div className="flex min-h-screen flex-col">
             <Header />
-            <Outlet />
-            <FooterLinks />
-        </>
+            <main className="bg-background flex-grow">
+                <Outlet />
+            </main>
+            <Footer />
+        </div>
     )
 }
 
-export default App;
+export default App
