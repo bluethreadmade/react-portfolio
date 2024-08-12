@@ -1,7 +1,7 @@
 const project = [
     {
         title: 'Craft Corner',
-        description: '',
+        description: `This application was created for busy job-hunters who want a centralized place to track what jobs they've applied to, the ongoing status of those applications, and when any interviews are scheduled.`,
         image: '/assets/craftcorner.PNG',
         githubLink: 'https://github.com/kaitlynmooney/craft-corner',
         deployedLink: 'http://craft-corner.onrender.com/',
@@ -55,15 +55,15 @@ export default function Project() {
                     key={item.title}
                     className="max-w-xl gap-x-2 overflow-hidden rounded shadow-lg"
                 >
-                    <div className="relative h-64 bg-gray-200 lg:h-80">
+                    <div className="relative flex h-64 items-center justify-center bg-gray-200 lg:h-80">
                         <img
-                            className="h-full w-full object-cover"
+                            className="max-h-full max-w-full"
                             src={item.image}
                             alt="Sunset in the mountains"
                         />
                     </div>
                     <div className="px-6 py-4">
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between space-x-4">
                             <div>
                                 <div className="mb-2 text-xl font-bold">
                                     {item.title}
@@ -72,26 +72,28 @@ export default function Project() {
                                     {item.description}
                                 </p>
                             </div>
-                            <div className="flex flex-col">
-                                <a href={item.deployedLink}>
+                            <div className="flex flex-shrink-0 flex-col space-y-2">
+                                <a href={item.githubLink}>
                                     <img
                                         className="h-12 w-12"
                                         src="/assets/github-mark.png"
                                     />
                                 </a>
-                                <a href={item.githubLink}>
+                                <a href={item.deployedLink}>
                                     <svg
-                                        className="h-6 w-6 text-indigo-500"
+                                        className="h-12 w-12 text-indigo-500"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
+                                        strokeWidth="1.5"
                                         stroke="currentColor"
+                                        class="size-10"
                                     >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth="2"
-                                            d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
                                         />
                                     </svg>
                                 </a>
