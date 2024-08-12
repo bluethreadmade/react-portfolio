@@ -1,30 +1,64 @@
 import ResumeButton from '../components/UI/ResumeButton'
 
-// This is a static page - an "About Me" section
+const skills = [
+    { name: 'HTML', imageSrc: '/assets/images/skill-logos/HTML5_Logo_512.png' },
+    {
+        name: 'SQL',
+        imageSrc:
+            '/assets/images/skill-logos/512px-Sql_data_base_with_logo.png',
+    },
+    {
+        name: 'JavaScript',
+        imageSrc: '/assets/images/skill-logos/Javascript_badge.svg',
+    },
+    {
+        name: 'Bootstrap',
+        imageSrc: '/assets/images/skill-logos/bootstrap-logo.svg',
+    },
+    { name: 'React', imageSrc: '/assets/images/skill-logos/react-logo.svg' },
+    {
+        name: 'Express.js',
+        imageSrc: '/assets/images/skill-logos/Expressjs.png',
+    },
+    {
+        name: 'MongoDB',
+        imageSrc: '/assets/images/skill-logos/MongoDB_SlateBlue.png',
+    },
+    { name: 'NPM', imageSrc: '/assets/images/skill-logos/Npm-logo.svg' },
+    {
+        name: 'JQuery',
+        imageSrc: '/assets/images/skill-logos/JQuery-Logo.svg.png',
+    },
+    { name: 'NodeJS', imageSrc: '/assets/images/skill-logos/jsIconGreen.svg' },
+    { name: 'Vite', imageSrc: '/assets/images/skill-logos/Vitejs-logo.svg' },
+    { name: 'Git', imageSrc: '/assets/images/skill-logos/Git-Logo-2Color.png' },
+    {
+        name: 'Tailwind',
+        imageSrc: '/assets/images/skill-logos/tailwindcss-logotype.svg',
+    },
+    { name: 'Scrum Master', imageSrc: '/assets/images/skill-logos/SCRUM.png' },
+]
+
 export default function ResumePage() {
     return (
-        <div className="bg-background">
-            <div className="bg-background mx-auto flex max-w-7xl flex-col items-center lg:flex-row">
-                <img
-                    src="/assets/headshot.jpg"
-                    className="mb-12 w-36 rounded-full object-cover lg:w-64"
-                ></img>
-                <div>
-                    <p className="mx-16 text-lg font-medium text-gray-800">
-                        ABOUT ABOUT ABOUT Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Repellendus tenetur maiores, dolor
-                        iusto dolorum ullam, natus deleniti blanditiis impedit
-                        suscipit sed magnam alias in, repellat expedita hic
-                        explicabo architecto soluta. About us Lorem ipsum, dolor
-                        sit amet consectetur adipisicing elit. Velit voluptate
-                        exercitationem quaerat pariatur mollitia, excepturi,
-                        voluptatem eveniet a dolor nobis ex veniam totam nostrum
-                        temporibus ad omnis nam rerum eligendi.
-                    </p>
-                    <div className="mx-16 my-16 flex justify-center">
-                        <ResumeButton />
-                    </div>
-                </div>
+        <div className="bg-background flex flex-row items-center justify-center gap-32 py-10">
+            <div className="flex flex-col items-center">
+                <h2 className="text-accent text-3xl font-bold">Technologies</h2>
+                <ul className="bg-background py-10">
+                    {skills.map((skill, index) => (
+                        <li
+                            key={index}
+                            className="flex w-48 flex-col items-center p-2 shadow-lg"
+                        >
+                            <p className="text-accent text-xl font-bold">
+                                {skill.name}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <ResumeButton />
             </div>
         </div>
     )
