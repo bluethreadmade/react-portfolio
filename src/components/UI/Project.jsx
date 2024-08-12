@@ -1,7 +1,7 @@
 const project = [
     {
         title: 'Craft Corner',
-        description: `This application was created for busy job-hunters who want a centralized place to track what jobs they've applied to, the ongoing status of those applications, and when any interviews are scheduled.`,
+        description: `This application was created for new crafters looking for a way in and for passionate hobbyists looking to learn, grow and connect.`,
         image: '/assets/craftcorner.PNG',
         githubLink: 'https://github.com/kaitlynmooney/craft-corner',
         deployedLink: 'http://craft-corner.onrender.com/',
