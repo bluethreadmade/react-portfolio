@@ -51,55 +51,52 @@ export default function Project() {
     return (
         <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
             {project.map((item) => (
-                <div className="max-w-sm overflow-hidden rounded shadow-lg">
-                    <div className="relative">
+                <div
+                    key={item.title}
+                    className="max-w-xl gap-x-2 overflow-hidden rounded shadow-lg"
+                >
+                    <div className="relative h-64 bg-gray-200 lg:h-80">
                         <img
-                            className="w-full"
+                            className="h-full w-full object-cover"
                             src={item.image}
                             alt="Sunset in the mountains"
                         />
-                        <div className="absolute inset-y-0 right-0 flex flex-col justify-center space-y-2 bg-white bg-opacity-50 p-2 hover:bg-opacity-100">
-                            <a href={item.deployedLink}>
-                                <svg
-                                    className="h-6 w-12 text-indigo-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a href={item.githubLink}>
-                                <svg
-                                    className="h-6 w-12 text-indigo-500"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                     <div className="px-6 py-4">
-                        <div className="mb-2 text-xl font-bold">
-                            {item.title}
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <div className="mb-2 text-xl font-bold">
+                                    {item.title}
+                                </div>
+                                <p className="text-base text-gray-700">
+                                    {item.description}
+                                </p>
+                            </div>
+                            <div className="flex flex-col">
+                                <a href={item.deployedLink}>
+                                    <img
+                                        className="h-12 w-12"
+                                        src="/assets/github-mark.png"
+                                    />
+                                </a>
+                                <a href={item.githubLink}>
+                                    <svg
+                                        className="h-6 w-6 text-indigo-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                                        />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <p className="text-base text-gray-700">
-                            {item.description}
-                        </p>
                     </div>
                 </div>
             ))}

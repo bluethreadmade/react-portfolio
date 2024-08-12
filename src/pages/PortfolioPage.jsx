@@ -1,4 +1,4 @@
-import Project from "../components/UI/Project";
+import Project from '../components/UI/Project'
 
 // This is a page that will be filled with project card components
 export default function PortfolioPage() {

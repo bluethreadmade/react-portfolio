@@ -6,7 +6,7 @@ import Header from './components/Header'
 function App() {
     // The Outlet component will conditionally swap between the different pages according to the URL
     return (
-        <div className="flex min-h-screen flex-col">
+        <div className="flex flex-col min-h-screen ">
             <Header />
             <main className="bg-background flex-grow pt-12">
                 <Outlet />
