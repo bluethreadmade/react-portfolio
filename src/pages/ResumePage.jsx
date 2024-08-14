@@ -41,8 +41,8 @@ const skills = [
 
 export default function ResumePage() {
     return (
-        <div className="bg-background flex flex-row items-center justify-center gap-32 py-10">
-            <div className="flex flex-col items-center">
+        <div className="bg-background flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-32 py-10">
+            <div className="flex flex-col items-center order-last">
                 <h2 className="text-accent text-3xl font-bold">Technologies</h2>
                 <ul className="bg-background py-10">
                     {skills.map((skill, index) => (
