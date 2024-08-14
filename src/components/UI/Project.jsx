@@ -59,7 +59,6 @@ export default function Project() {
                         <img
                             className="max-h-full max-w-full"
                             src={item.image}
-                            alt="Sunset in the mountains"
                         />
                     </div>
                     <div className="px-6 py-4">
