@@ -1,3 +1,5 @@
+import NavInProjects from './NavInProjects'
+
 const project = [
     {
         title: 'Craft Corner',
@@ -49,29 +51,32 @@ const project = [
 
 export default function Project() {
     return (
-        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3 p-4 md: px-12">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 p-4 px-12 md:grid-cols-2 lg:grid-cols-3">
             {project.map((item) => (
                 <div
                     key={item.title}
-                    className="max-w-xl gap-x-2 overflow-hidden rounded shadow-lg"
+                    className="flex flex-col max-w-xl overflow-hidden rounded shadow-lg"
                 >
                     <div className="relative flex h-64 items-center justify-center bg-gray-200 lg:h-80">
                         <img
                             className="max-h-full max-w-full"
                             src={item.image}
+                            alt={item.title}
                         />
                     </div>
-                    <div className="px-6 py-4">
-                        <div className="flex items-center justify-between space-x-4">
-                            <div>
-                                <div className="mb-2 text-xl font-bold">
+                        <div className="flex flex-col flex-grow pt-6 px-6">
+                            <div className="flex flex-col flex-grow">
+                                <div className="mb-2 text-2xl font-bold">
                                     {item.title}
                                 </div>
                                 <p className="text-base text-gray-700">
                                     {item.description}
                                 </p>
                             </div>
-                            <div className="flex flex-shrink-0 flex-col space-y-2">
+                            <div className="py-2 mt-auto">
+                                <NavInProjects />
+                            </div>
+                            {/* <div className="flex flex-shrink-0 flex-row space-y-2">
                                 <a href={item.githubLink}>
                                     <img
                                         className="h-12 w-12"
@@ -96,10 +101,9 @@ export default function Project() {
                                         />
                                     </svg>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                </div>
             ))}
         </div>
     )

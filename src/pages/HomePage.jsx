@@ -3,7 +3,7 @@ import ResumeButton from '../components/UI/ResumeButton'
 // This is a static page - an "About Me" section
 export default function HomePage() {
     return (
-        <div>
+        <div className="relative min-h-screen">
       <div className="flex flex-col items-center md:flex-row mt-5 lg:mt-20 lg:justify-around">
         {/* headshot */}
         <img className="block object-scale-down mb-10 mx-20 min-w-44 max-w-60 lg:max-w-lg" src="/assets/images/portfolio image.png" ></img>
@@ -41,7 +41,7 @@ export default function HomePage() {
                     </p>
                 </div>
           </div>
-          <div className="mx-16 my-16 flex justify-center z-10">
+          <div className="my-10 xs:mx-16 xs:my-16 flex justify-center z-10">
                 <ResumeButton />
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function HomePage() {
         <img
           src="/assets/images/Graph.png"
           alt="Graph Image"
-          className=""
+          className="w-full h-full object-cover"
         />
       </div>
     </div>
