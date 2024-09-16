@@ -49,7 +49,7 @@ const project = [
 
 export default function Project() {
     return (
-        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3 p-4 md: px-12">
             {project.map((item) => (
                 <div
                     key={item.title}

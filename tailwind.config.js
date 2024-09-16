@@ -4,16 +4,19 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
+        fontFamily: {
+            sans: ['Arimo'],
+            serif: ['"IBM  Plex Serif"'],
+        },
+
         extend: {
             colors: {
                 primary: '#7A9E9F',
                 textLight: '#EEF5DB',
-                accent: '#49306B',
-                background: '#b8d8d8',
-                headerBackground: '#92c3c3'
-            },
-            fontFamily: {
-                sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+                accent: '#FF715B',
+                background: '#F1EFEB',
+                gunmetal: "#143642",
+                "french-gray": "#BFCCD8",
             },
             darkMode: 'selector',
         },
