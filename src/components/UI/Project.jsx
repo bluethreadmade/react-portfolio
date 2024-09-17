@@ -57,7 +57,7 @@ export default function Project() {
                     key={item.title}
                     className="flex flex-col max-w-xl overflow-hidden rounded shadow-lg"
                 >
-                    <div className="relative flex h-64 items-center justify-center bg-gray-200 lg:h-80">
+                    <div className="relative flex h-64 px-6 items-center justify-center bg-gray-200 lg:h-80">
                         <img
                             className="max-h-full max-w-full"
                             src={item.image}
@@ -69,12 +69,14 @@ export default function Project() {
                                 <div className="mb-2 text-2xl font-bold">
                                     {item.title}
                                 </div>
-                                <p className="text-base text-gray-700">
+                                <p className="text-base lg:text-xl text-gray-700">
                                     {item.description}
                                 </p>
                             </div>
                             <div className="py-2 mt-auto">
-                                <NavInProjects />
+                                <NavInProjects 
+                                    githubLink={item.githubLink}
+                                    deployedLink={item.deployedLink}/>
                             </div>
                             {/* <div className="flex flex-shrink-0 flex-row space-y-2">
                                 <a href={item.githubLink}>

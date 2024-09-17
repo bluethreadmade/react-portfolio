@@ -20,6 +20,7 @@ module.exports = {
                 background: '#F1EFEB',
                 gunmetal: "#143642",
                 "french-gray": "#BFCCD8",
+                "reseda-green": "#798E7B",
             },
             darkMode: 'selector',
         },
